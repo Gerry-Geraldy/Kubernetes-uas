@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: customers-service
+spec:
+  selector:
+    app: customers-service
+  ports:
+    - protocol: TCP
+      port: 5555
+      targetPort: 5555
+  type: NodePort
+  
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: customers-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: customers-service
+  template:
+    metadata:
+      labels:
+        app: customers-service
+    spec:
+      containers:
+        - name: customers-container
+          image: gerrydockeruser/customers-service:latest  # Ganti dengan nama dan versi image Anda
+          ports:
+            - containerPort: 5555

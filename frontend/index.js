@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const booksList = document.getElementById("books-list");
 
   const fetchAndDisplayBooks = () => {
-    fetch("http://localhost:4545/books")
+    fetch("http://books-service:4545/books")
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);

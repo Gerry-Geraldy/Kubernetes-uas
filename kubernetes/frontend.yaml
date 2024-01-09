@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-service
+spec:
+  selector:
+    app: frontend-app # Sesuaikan dengan label pod yang sesuai
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80 # Sesuaikan dengan port aplikasi frontend Anda
+  type: NodePort
