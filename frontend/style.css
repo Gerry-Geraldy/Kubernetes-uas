@@ -1,0 +1,104 @@
+/* Reset default margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Heading styles */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form styles */
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"] {
+  width: calc(100% - 12px);
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  padding: 10px 15px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #555;
+}
+
+/* Books list styles */
+#books-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.book {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.book h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.book p {
+  margin-bottom: 8px;
+}
+
+.book-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+button.edit,
+button.delete {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button.edit {
+  background-color: #ffc107;
+  color: #333;
+}
+
+button.delete {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+button.edit:hover,
+button.delete:hover {
+  filter: brightness(0.8);
+}
